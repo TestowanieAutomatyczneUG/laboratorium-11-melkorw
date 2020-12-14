@@ -7,6 +7,8 @@ setup.py
 data/data_file
 src/file/__init__.py
 src/file/file.py
+src/note/__init__.py
+src/note/note.py
 src/sampleproject.egg-info/PKG-INFO
 src/sampleproject.egg-info/SOURCES.txt
 src/sampleproject.egg-info/dependency_links.txt
