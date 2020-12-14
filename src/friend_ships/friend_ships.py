@@ -3,6 +3,8 @@ class FriendShips:
         self.dict = {}
 
     def make_friends(self, person1, person2):
+        if type(person1) is not str or type(person2) is not str:
+            raise TypeError('Not string')
         self.add_friend(person1, person2)
         self.add_friend(person2, person1)
 

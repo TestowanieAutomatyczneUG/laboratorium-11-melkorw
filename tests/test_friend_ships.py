@@ -12,6 +12,11 @@ class TestFriendShips(unittest.TestCase):
         self.temp.make_friends(friend1, friend2)
         self.assertEqual(self.temp.dict, {'abc': ['abc2'], 'abc2': ['abc']})
 
+    def test_make_friends_exception(self):
+        friend1 = 2
+        friend2 = 'abc2'
+        self.assertRaises(TypeError, self.temp.make_friends, friend1, friend2)
+
     def test_are_friends(self):
         friend1 = 'abc'
         friend2 = 'abc2'
@@ -32,3 +37,6 @@ class TestFriendShips(unittest.TestCase):
         friend2 = 'abc2'
         self.temp.add_friend(friend1, friend2)
         self.assertEqual(self.temp.dict, {'abc': ['abc2']})
+
+    def tearDown(self):
+        self.temp = None
